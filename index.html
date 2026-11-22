@@ -64,7 +64,7 @@
     .art-badge { position:absolute; z-index:2; top:25px; left:4px; display:flex; align-items:center; gap:8px; padding:9px 12px; color:var(--red-dark); background:white; border:1px solid var(--line); border-radius:10px; box-shadow:0 8px 25px #6f18200d; font-size:10px; font-weight:900; letter-spacing:.1em; text-transform:uppercase; transform:rotate(-5deg); }
     .art-badge:before { content:"✳"; color:var(--red-bright); font-size:15px; }
     .art-caption { position:absolute; z-index:2; right:1px; bottom:26px; padding:10px 14px; border-radius:11px; background:var(--red); color:#fff; font-size:11px; font-weight:850; letter-spacing:.04em; transform:rotate(4deg); box-shadow:0 10px 24px #b91f3230; }
-    .capoeira-art { position:relative; z-index:1; width:90%; max-width:350px; filter:drop-shadow(0 20px 14px #7b263026); }
+    .capoeira-art { position:relative; z-index:1; width:100%; max-width:520px; filter:drop-shadow(0 20px 14px #7b263026); }
     .intro-form { display:grid; grid-template-columns:1fr 1fr auto; gap:10px; margin-top:27px; padding:8px; border:1px solid var(--line); border-radius:15px; background:white; box-shadow:0 12px 34px #751b240a; }
     .field { min-width:0; padding:6px 12px 7px; border-right:1px solid var(--line); }
     .field:last-of-type { border:0; }
@@ -145,7 +145,7 @@
       .hero-copy { max-width:640px; }
       .hero-visual { min-height:315px; }
       .circle-art { width:300px; }
-      .capoeira-art { max-width:290px; }
+      .capoeira-art { max-width:420px; }
       .art-badge { left:calc(50% - 160px); top:15px; }
       .art-caption { right:calc(50% - 160px); bottom:12px; }
     }
@@ -169,7 +169,7 @@
       .primary { min-height:49px; margin-top:7px; }
       .hero-visual { min-height:273px; }
       .circle-art { width:255px; }
-      .capoeira-art { max-width:240px; }
+      .capoeira-art { max-width:330px; }
       .art-badge { left:calc(50% - 138px); font-size:8px; }
       .art-caption { right:calc(50% - 138px); bottom:8px; font-size:9px; }
       .below-hero { grid-template-columns:1fr; gap:8px; }
@@ -221,28 +221,80 @@
             </form>
             <div class="form-error" id="form-error" role="status" aria-live="polite"></div>
           </div>
-          <div class="hero-visual" aria-label="Ilustração de dois capoeiristas jogando na roda" role="img">
+          <div class="hero-visual" aria-label="Ilustração de quatro crianças e quatro adolescentes na roda, em uniformes brancos e cordas brancas" role="img">
             <div class="circle-art"></div>
             <div class="art-badge">Jogo de corpo e saber</div>
-            <svg class="capoeira-art" viewBox="0 0 360 300" fill="none" aria-hidden="true">
-              <ellipse cx="177" cy="254" rx="127" ry="19" fill="#EDD6D3"/>
-              <path d="M54 249c48-18 193-18 246 0" stroke="#BE8584" stroke-width="2" stroke-dasharray="4 8" stroke-linecap="round"/>
-              <g transform="translate(37 13)">
-                <circle cx="107" cy="67" r="17" fill="#211B1B"/>
-                <path d="M97 84c-20 8-35 27-39 50l-9 56 25 7 19-47 6 39 25 3 6-46c3-25-2-46-13-58l-20-4Z" fill="#B91F32"/>
-                <path d="m74 111-31 34-30-12-5 12 38 19c5 3 10 1 13-3l31-31m25-15 28 29 28-14 7 12-36 26c-5 3-10 2-14-2l-32-30" stroke="#211B1B" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="m87 185-20 37-36 16 5 13 45-11c7-2 12-6 14-12l18-40m35-3 18 29 34 11-5 14-46-8c-7-1-12-5-15-11l-19-31" stroke="#211B1B" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M96 65c3-3 8-5 13-4" stroke="#211B1B" stroke-width="3" stroke-linecap="round"/>
-                <path d="m92 90 22 5" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+            <svg class="capoeira-art" viewBox="0 0 560 320" fill="none" aria-hidden="true">
+              <defs>
+                <g id="capoeirista-base" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M19 52Q9 54 6 68L2 76M41 52Q52 49 57 62L62 71" stroke="#CFC1BE" stroke-width="12"/>
+                  <path d="M19 52Q9 54 6 68L2 76M41 52Q52 49 57 62L62 71" stroke="#FFFEFC" stroke-width="8"/>
+                  <circle cx="2" cy="77" r="4.2" fill="var(--skin)" stroke="none"/>
+                  <circle cx="63" cy="72" r="4.2" fill="var(--skin)" stroke="none"/>
+                  <path d="M18 87Q27 93 31 92L27 119Q21 130 10 136L6 132L16 117ZM31 92Q38 93 44 87L49 113L59 126L55 131L40 123L29 111Z" fill="#FFFEFC" stroke="#CEC2BF" stroke-width="2"/>
+                  <path d="M11 136 3 139M55 131 64 134" stroke="var(--skin)" stroke-width="5"/>
+                  <path d="M17 87Q30 92 45 87" stroke="#A99A97" stroke-width="7"/>
+                  <path d="M17 87Q30 92 45 87" stroke="#FFFEFC" stroke-width="4.5"/>
+                  <path d="M29 89 31 95 36 91M31 94 28 101" stroke="#CFC1BE" stroke-width="2.4"/>
+                  <path d="M20 51Q30 45 41 51L45 87Q30 92 16 87Z" fill="#FFFEFC" stroke="#CEC2BF" stroke-width="2"/>
+                  <path d="m25 49 5 8 6-8" stroke="#B91F32" stroke-width="1.7"/>
+                  <path d="M21 58 14 68M40 58 47 67" stroke="#E7DAD7" stroke-width="1.5"/>
+                  <path d="M30 36V48" stroke="var(--skin)" stroke-width="5"/>
+                  <circle cx="30" cy="23" r="13" fill="var(--skin)"/>
+                  <circle cx="25.5" cy="23" r="1.25" fill="#211B1B"/>
+                  <circle cx="34.5" cy="23" r="1.25" fill="#211B1B"/>
+                  <path d="M27 29Q30 31 33 29" stroke="#773C35" stroke-width="1.2"/>
+                  <path d="M16 15Q18 4 29 4Q41 3 44 14L41 19Q38 12 31 12Q23 11 19 20Z" fill="var(--hair)" stroke="var(--hair)" stroke-width="2"/>
+                </g>
+              </defs>
+              <ellipse cx="282" cy="286" rx="258" ry="23" fill="#F0DAD7"/>
+              <ellipse cx="282" cy="284" rx="226" ry="14" stroke="#CDA5A2" stroke-width="1.5" stroke-dasharray="4 8"/>
+              <path d="M67 282Q282 240 497 282" stroke="#E8C7C4" stroke-width="1.5"/>
+              <text x="137" y="157" text-anchor="middle" fill="#A82A39" font-family="system-ui,sans-serif" font-size="10" font-weight="900" letter-spacing="1.5">CRIANÇAS</text>
+              <text x="393" y="123" text-anchor="middle" fill="#A82A39" font-family="system-ui,sans-serif" font-size="10" font-weight="900" letter-spacing="1.5">ADOLESCENTES</text>
+              <g transform="translate(24 166) scale(.69)" style="--skin:#E8B894;--hair:#5A3529">
+                <path d="M17 19Q12 13 16 8Q18 2 24 5Q28-1 34 5Q42 3 44 12L41 19Q35 11 28 12Q21 12 17 20Z" fill="#5A3529"/>
+                <use href="#capoeirista-base"/>
+                <path d="M18 12q3-5 6 0m2-5q3-5 6 0m2 4q3-5 6 0" stroke="#76503F" stroke-width="2"/>
               </g>
-              <g transform="translate(181 65) scale(.78)">
-                <circle cx="104" cy="57" r="16" fill="#211B1B"/>
-                <path d="M91 75c-18 10-26 28-24 51l6 44 25 2 7-39 16 32 23-9-17-47c-6-20-15-32-28-37l-8 3Z" fill="#E64855"/>
-                <path d="m73 107-34 24-27-16-8 11 36 26c5 4 11 3 15-1l34-27m31-15 29-19 24 16 9-10-31-28c-5-5-11-5-16-1l-31 20" stroke="#211B1B" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="m99 169-18 34-34 13 4 13 43-7c7-1 12-5 15-11l18-29m16-14 18 31 38 5-2 14-47 0c-7 0-13-3-16-9l-19-29" stroke="#211B1B" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="m86 79 18 3" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+              <g transform="translate(82 166) scale(.69)" style="--skin:#6B4434;--hair:#211B1B">
+                <circle cx="17" cy="14" r="8" fill="#211B1B"/><circle cx="43" cy="14" r="8" fill="#211B1B"/>
+                <path d="M16 22Q12 9 22 4Q31-1 40 5Q48 12 43 23L39 17Q30 11 20 20Z" fill="#211B1B"/>
+                <use href="#capoeirista-base"/>
               </g>
-              <path d="M177 40v22m-10-11h20" stroke="#B91F32" stroke-width="2" stroke-linecap="round" opacity=".6"/>
+              <g transform="translate(140 166) scale(.69)" style="--skin:#F2CDAE;--hair:#A8573F">
+                <path d="M17 20Q14 7 25 4Q38 1 44 13L42 22Q38 14 30 12Q23 13 18 23ZM42 17Q52 17 52 27Q50 34 44 31L42 26Z" fill="#A8573F" stroke="#A8573F" stroke-width="2"/>
+                <use href="#capoeirista-base"/>
+                <path d="M20 11Q30 6 41 12" stroke="#C7795E" stroke-width="2"/>
+              </g>
+              <g transform="translate(198 166) scale(.69)" style="--skin:#87563F;--hair:#211B1B">
+                <circle cx="17" cy="14" r="8" fill="#211B1B"/><circle cx="43" cy="14" r="8" fill="#211B1B"/>
+                <path d="M15 21Q11 10 20 4Q30-3 40 4Q48 10 44 22L40 17Q30 11 20 19Z" fill="#211B1B"/>
+                <use href="#capoeirista-base"/>
+                <circle cx="15" cy="14" r="2" fill="#B91F32"/><circle cx="45" cy="14" r="2" fill="#B91F32"/>
+              </g>
+              <g transform="translate(264 132) scale(.84)" style="--skin:#E7B993;--hair:#302521">
+                <path d="M16 19Q13 10 19 5Q23 0 28 4Q35-1 39 5Q47 8 44 19L41 22Q37 13 31 12Q23 11 18 21Z" fill="#302521"/>
+                <use href="#capoeirista-base"/>
+                <path d="M20 9q3-5 6 0m5-2q3-5 6 0" stroke="#59413B" stroke-width="2"/>
+              </g>
+              <g transform="translate(330 132) scale(.84)" style="--skin:#603E30;--hair:#1D1817">
+                <path d="M16 18Q14 7 22 4L25 8 29 3 33 8 37 3 42 8 45 18 41 22Q31 12 20 21Z" fill="#1D1817"/>
+                <use href="#capoeirista-base"/>
+                <path d="m23 6 1 5m7-6 1 5m7-3 1 5" stroke="#7A5749" stroke-width="1.5"/>
+              </g>
+              <g transform="translate(396 132) scale(.84)" style="--skin:#F1C9A6;--hair:#A8774D">
+                <path d="M16 19Q14 7 25 4Q38 1 44 12L43 21Q37 12 30 12Q22 12 18 21ZM42 15Q55 18 50 29Q47 34 42 30L43 24Z" fill="#A8774D" stroke="#A8774D" stroke-width="2"/>
+                <use href="#capoeirista-base"/>
+                <path d="M20 10Q30 6 41 12" stroke="#D1A77B" stroke-width="2"/>
+              </g>
+              <g transform="translate(462 132) scale(.84)" style="--skin:#784A36;--hair:#211B1B">
+                <path d="M16 18Q14 7 24 4Q35 1 44 10L42 20Q36 12 30 12Q22 12 18 21Z" fill="#211B1B"/>
+                <use href="#capoeirista-base"/>
+                <path d="M19 16Q16 31 20 43M23 15Q21 31 25 44M41 15Q44 30 40 42" stroke="#211B1B" stroke-width="2"/>
+                <circle cx="20" cy="43" r="1.6" fill="#B91F32"/><circle cx="25" cy="44" r="1.6" fill="#B91F32"/><circle cx="40" cy="42" r="1.6" fill="#B91F32"/>
+              </g>
+              <path d="M281 55v18m-9-9h18" stroke="#B91F32" stroke-width="2" stroke-linecap="round" opacity=".55"/>
             </svg>
             <div class="art-caption">Ginga, saber & respeito</div>
           </div>
